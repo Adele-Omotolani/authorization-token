@@ -14,7 +14,8 @@ app.use("/api",bookRoutes)
 app.use("/api",adminRouter)
 
 app.get("/", async(req: Request, res: Response): Promise<void> => {
-    res.status(200).json({message: "API is running"})
+    // res.status(200).json({message: "API is running"})
+    res.send("Hello, Welcome to my API")
 })
 
 app.listen(port,()=>{console.log(`server http://localhost:${port}`)})

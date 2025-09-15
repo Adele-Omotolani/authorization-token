@@ -24,10 +24,15 @@ export const JWT = async (
   }
 
   try {
-    const decoded = jwt.verify(token,process.env.JWT_SECRET as string) as JwtPayload;
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET as string
+    ) as JwtPayload;
 
     // Try to find user in Users collection
-    const user = await userModel.findById(decoded.id || decoded._id).select("-password");
+    const user = await userModel
+      .findById(decoded.id || decoded._id)
+      .select("-password");
 
     // If not found, try Admins collection
     // if (!user) {
