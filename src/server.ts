@@ -1,4 +1,4 @@
-import express,{ Express } from "express";
+import express,{ Express, Response, Request } from "express";
 import { connectDB } from "./config/db";
 import { UserRoutes } from "./routes/userRoutes";
 import { bookRoutes } from "./routes/bookRoutes";
@@ -13,9 +13,8 @@ app.use("/api",UserRoutes)
 app.use("/api",bookRoutes)
 app.use("/api",adminRouter)
 
-app.get("/", async(req, res) => {
+app.get("/", async(req: Request, res: Response): Promise<void> => {
     res.status(200).json({message: "API is running"})
 })
-
 
 app.listen(port,()=>{console.log(`server http://localhost:${port}`)})
