@@ -10,11 +10,13 @@ import {
   getAllUser,
 } from "../controller/adminController";
 import { JWT } from "../JWT/jwt";
+import { requireRole } from "../middleware/roleGuard";
 
 
 export const adminRouter: Router = express.Router();
 
-adminRouter.use(JWT);
+adminRouter.use(JWT, requireRole(["admin"]));
+
 
 adminRouter.post("/signupadmin", SignUpAdmin);
 adminRouter.post("/loginadmin", LoginAdmin);

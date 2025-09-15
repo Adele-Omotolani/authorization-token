@@ -36,10 +36,7 @@ export const SignUpAdmin = async (req: Request,res: Response): Promise<void> => 
   }
 };
 
-export const LoginAdmin = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const LoginAdmin = async (req: Request,res: Response): Promise<void> => {
   try {
     const { email, password } = req.body as Pick<IAdmin, "email" | "password">;
     if (!email || !password) {

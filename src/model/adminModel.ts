@@ -2,6 +2,7 @@ import "dotenv/config";
 import mongoose from "mongoose";
 
 export interface IAdmin extends Document {
+  _id: mongoose.Types.ObjectId;
   name: string;
   password: string;
   email: string;
