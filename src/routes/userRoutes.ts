@@ -5,7 +5,6 @@ import {
   userLogin,
 } from "../controller/userController";
 // import { JWT } from "../JWT/jwt";
-// import { requireRole } from "../middleware/roleGuard";
 
 export const UserRoutes: Router = express.Router();
 
