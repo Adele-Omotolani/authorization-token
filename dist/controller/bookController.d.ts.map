@@ -1,0 +1,1 @@
+{"version":3,"file":"bookController.d.ts","sourceRoot":"","sources":["../../src/controller/bookController.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAA;AAI3C,eAAO,MAAM,YAAY,GAAS,KAAI,OAAO,EAAC,KAAI,QAAQ,KAAE,OAAO,CAAC,IAAI,CAgCvE,CAAA;AAGD,eAAO,MAAM,QAAQ,GAAU,KAAK,OAAO,EAAE,KAAK,QAAQ,KAAG,OAAO,CAAC,IAAI,CAWxE,CAAC"}
