@@ -13,5 +13,9 @@ app.use("/api",UserRoutes)
 app.use("/api",bookRoutes)
 app.use("/api",adminRouter)
 
+app.get("/", async(req, res) => {
+    res.status(200).json({message: "API is running"})
+})
+
 
 app.listen(port,()=>{console.log(`server http://localhost:${port}`)})
